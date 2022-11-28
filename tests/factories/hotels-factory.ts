@@ -5,7 +5,7 @@ import { Booking, Hotel, Room, TicketStatus } from "@prisma/client";
 export function createHotel(): Promise<Hotel> {
   return prisma.hotel.create({
     data: {
-      name: "Hotel",
+      name: faker.random.word() + " Hotel",
       image: faker.image.city()
     }
   });
